@@ -39,7 +39,7 @@ body {
   max-width: 95vw;
 }
 
-.container {
+.logoStore {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -47,7 +47,7 @@ body {
   align-items: center;
   text-align: center;
 }
-.container img {
+.logoStore img {
   width: 70vw;
   height: 50vh;
   margin-top: 10px;
@@ -90,6 +90,32 @@ body {
 .items a {
   display: block;
   margin: 10px 0;
+}
+.items .fa-ticket-alt:before {
+  padding-right: 4px;
+}
+.items .fa-money-bill-alt:before {
+  padding-right: 4px;
+}
+
+.ecomresp-tab-footer {
+  width: 98%;
+}
+.ecomresp-tab-footer .textoMaiorFooter {
+  left: 5px;
+  position: relative;
+}
+
+.ecomresp-paginacao-footer {
+  color: #7D26CD;
+  position: relative;
+  right: -50px;
+  padding-bottom: 50px;
+}
+.ecomresp-paginacao-footer:hover {
+  color: blue;
+  cursor: pointer;
+  border-bottom: 1px solid blue;
 }
 
 @media only screen and (max-width: 375px) {
