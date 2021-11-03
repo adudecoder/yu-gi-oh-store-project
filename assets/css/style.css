@@ -1,6 +1,17 @@
+@font-face {
+  font-family: "OpenSans ExBold";
+  src: url("/assets/fonts/Open_Sans/static/OpenSans/OpenSans-ExtraBold.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "OpenSans Light";
+  src: url("/assets/fonts/Open_Sans/static/OpenSans/OpenSans-Light.ttf");
+  font-weight: 400;
+}
 * {
   box-sizing: border-box;
   text-decoration: none;
+  list-style-type: none;
 }
 
 body {
@@ -90,6 +101,7 @@ body {
 .items a {
   display: block;
   margin: 10px 0;
+  font-family: "OpenSans Italic";
 }
 .items .fa-ticket-alt:before {
   padding-right: 4px;
@@ -100,6 +112,7 @@ body {
 
 .ecomresp-tab-footer {
   width: 98%;
+  margin-bottom: 60px;
 }
 .ecomresp-tab-footer .textoMaiorFooter {
   left: 5px;
@@ -116,6 +129,82 @@ body {
   color: blue;
   cursor: pointer;
   border-bottom: 1px solid blue;
+}
+
+.footer {
+  width: 100%;
+  background-color: rgba(0, 0, 128, 0.7);
+}
+
+.menu-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  /*li:nth-child(5) {
+      margin-top: 15px;
+  }*/
+}
+.menu-footer ul {
+  margin: 0;
+}
+.menu-footer li {
+  padding: 5px;
+  font-family: "OpenSans Light";
+  font-weight: bold;
+}
+.menu-footer li:nth-child(2) {
+  font-family: "OpenSans ExBold";
+}
+.menu-footer a {
+  color: #fff;
+}
+
+.menu-footer-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  left: 22px;
+  color: #fff;
+}
+.menu-footer-contact small {
+  left: -60px;
+  top: 15px;
+  position: relative;
+  font-family: "OpenSans Light";
+}
+.menu-footer-contact li {
+  padding: 5px;
+  font-family: "OpenSans ExBold";
+}
+.menu-footer-contact li:nth-child(2) {
+  position: relative;
+  left: -30px;
+}
+.menu-footer-contact li:nth-child(3) {
+  right: 25px;
+  position: relative;
+}
+.menu-footer-contact img {
+  width: 25px;
+  position: relative;
+  left: -10px;
+  top: 8px;
+}
+
+.menu-footer-network {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.menu-footer-network img {
+  width: 30px;
+  height: 25px;
+  border-radius: 50px;
 }
 
 @media only screen and (max-width: 375px) {
