@@ -133,21 +133,22 @@ body {
 
 .footer {
   width: 100%;
-  background-color: rgba(0, 0, 128, 0.7);
+  background-color: rgba(79, 79, 79, 0.7);
 }
 
 .menu-footer {
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: #fff;
+  margin-left: 35px;
   /*li:nth-child(5) {
       margin-top: 15px;
   }*/
 }
 .menu-footer ul {
   margin: 0;
+  padding: 0;
 }
 .menu-footer li {
   padding: 5px;
@@ -160,15 +161,29 @@ body {
 .menu-footer a {
   color: #fff;
 }
+.menu-footer img {
+  width: 350px;
+}
+.menu-footer .adress {
+  position: relative;
+  bottom: 49px;
+}
 
 .menu-footer-contact {
-  display: flex;
+  /*display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   position: relative;
-  left: 22px;
+  left: 22px;*/
+  position: relative;
+  display: flex;
+  min-height: 100px;
+  justify-content: center;
+  align-items: center;
   color: #fff;
+  margin-left: 32px;
+  bottom: 16px;
 }
 .menu-footer-contact small {
   left: -60px;
@@ -188,23 +203,50 @@ body {
   right: 25px;
   position: relative;
 }
-.menu-footer-contact img {
+.menu-footer-contact #icon {
   width: 25px;
+  height: 25px;
   position: relative;
   left: -10px;
   top: 8px;
+  color: #000;
+}
+.menu-footer-contact ul {
+  margin: 0;
 }
 
 .menu-footer-network {
+  position: relative;
+  display: flex;
+  min-height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+.menu-footer-network .social-icons {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
 }
-.menu-footer-network img {
-  width: 30px;
-  height: 25px;
-  border-radius: 50px;
+.menu-footer-network .social-icons li a {
+  font-size: 2em;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.menu-footer-network .icon-face {
+  color: blue;
+}
+.menu-footer-network .icon-insta {
+  color: #551A8B;
+}
+.menu-footer-network .icon-tube {
+  color: red;
+}
+.menu-footer-network .social-icons li a:hover {
+  transform: translateY(-10px);
 }
 
 @media only screen and (max-width: 375px) {
