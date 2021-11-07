@@ -1,17 +1,33 @@
 $colorText: #fff;
+$rgb-color: #4F4F4F;
+$color-rgb-transparent: rgba($rgb-color, 0.7);
 
-$font: "/assets/fonts/Open_Sans/static/OpenSans/";
+$font-poppins: "fonts/Open_Sans,Poppins,Red_Hat_Mono/Poppins";
+$font-sans: "fonts/Open_Sans,Poppins,Red_Hat_Mono/Open-Sans/static";
+$font-monospace: "fonts/Red_Hat_Mono/static";
 
 @font-face {
     font-family: "OpenSans ExBold";
-    src: url($font + "OpenSans-ExtraBold.ttf");
+    src: url($font-sans+ "OpenSans-ExtraBold.ttf");
     font-weight: 800;
 }
 
 @font-face {
     font-family: "OpenSans Light";
-    src: url($font + "OpenSans-Light.ttf");
+    src: url($font-sans + "OpenSans-Light.ttf");
     font-weight: 400;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url($font-poppins + "Poppins-Black.ttf");
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "MonoSpace";
+    src: url($font-monospace + "RedHatMono-Light.ttf");
+    font-weight: 300;
 }
 
 * {
@@ -23,11 +39,68 @@ body {
     margin: 0;
     padding: 0;
 }
+.top {
+    width: 100%;
+    height: 100px;
+    background-color: $color-rgb-transparent;
+    .logo-top {
+        max-width: 55px;
+        margin: 10px;
+    }
+    .menu-login {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        bottom: 75px;
+        margin: 0;
+        padding: 0;
+        .icon-user, .icon-kart {
+            position: relative;
+            width: 25px;
+            height: 25px;
+            padding: 10px;
+            left: 100px;
+            color: $colorText;
+        }
+
+    }
+    .search-input {
+        position: relative;
+        bottom: 70px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        input {
+            width: 90%;
+            height: 30px;
+            border-radius: 100px;
+            border: none;
+            color: transparent;
+            text-shadow: 0 0 0 #000;
+            outline: none;
+        }
+        .icon-search {
+            position: relative;
+            right: 30px;
+        }
+    }
+    
+}
+.owl-carousel img {
+    height: 180px;
+}
+.logoStore h1 {
+    font-family: "Poppins";
+}
+.util {
+    height: 100px;
+}
 .ecomresp-tab {
     width: 98%;
     .textoMaior {
         left: 5px;
         position: relative;
+        font-family: "OpenSans Light";
     }
 }
 .ecomresp-paginacao {
@@ -75,7 +148,13 @@ body {
         padding: 5px 10px;
         border: 4px solid rgba(206, 198, 198, 0.2);
         margin-left: 40px;
+        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
+}
+.cards-item img:hover {
+    transform:scale(2.5, 2.5);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow:0 5px 15px 0 rgba(0,0,0,0.3);
 }
 .cards-item {
     > div {
@@ -92,16 +171,23 @@ body {
         float: left;
         margin: 0;
         font-size: 20px;
+        font-family: "MonoSpace";
+        position: relative;
+        bottom: 1px;
     }
     span {
         float: right;
         bottom: -3px;
         position: relative;
+        font-family: "MonoSpace";
+        z-index: -1;
     }
     a {
         display: block;
         margin: 10px 0;
-        font-family: "OpenSans Italic";
+        color: #000;
+        font-family: "MonoSpace";
+        font-size: 15px;
     }
     .fa-ticket-alt:before {
         padding-right: 4px;
@@ -126,14 +212,18 @@ body {
     &:hover {
         color: blue;
         cursor: pointer;
-        border-bottom: 1px solid blue;
+        //border-bottom: 1px solid blue;
     }
 }
 .footer {
     width: 100%;
     //height: 404px;
-    background-color: rgba(79, 79, 79, 0.7);
+    background-color: $color-rgb-transparent;
     //margin: 0;
+    background-image: url("/img/background-img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .menu-footer {
     //display: flex;
@@ -183,6 +273,7 @@ body {
     color: $colorText;
     margin-left: 32px;
     bottom: 16px;
+    font-weight: bold;
     small {
         left: -60px;
         top: 15px;
